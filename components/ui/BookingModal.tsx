@@ -1,6 +1,5 @@
-"use client"; // IMPORTANTE: Esto habilita la interactividad
+"use client";
 
-import { useEffect, useState } from "react";
 import { PopupModal } from "react-calendly";
 
 interface BookingModalProps {
@@ -10,13 +9,7 @@ interface BookingModalProps {
 }
 
 export default function BookingModal({ isOpen, onClose, url }: BookingModalProps) {
-  const [rootElement, setRootElement] = useState<HTMLElement | null>(null);
-
-  useEffect(() => {
-    setRootElement(document.getElementById("root") || document.body);
-  }, []);
-
-  if (!rootElement) return null;
+  if (typeof window === "undefined") return null;
 
   return (
     <PopupModal
@@ -25,10 +18,10 @@ export default function BookingModal({ isOpen, onClose, url }: BookingModalProps
         backgroundColor: "ffffff",
         hideEventTypeDetails: false,
         hideLandingPageDetails: false,
-        primaryColor: "5C8D73", // Color verde de tu marca (ajústalo si quieres)
+        primaryColor: "5C8D73",
         textColor: "4d5055",
       }}
-      rootElement={rootElement}
+      rootElement={document.getElementById("root") || document.body}
       open={isOpen}
       onModalClose={onClose}
     />

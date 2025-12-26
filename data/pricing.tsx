@@ -1,19 +1,36 @@
+import { Video, MapPin } from "lucide-react";
+
 export const pricingData = [
   {
-    title: "Sesión Individual",
+    title: "Sesión Online",
     price: "$25.000",
-    duration: "60 minutos", // Ajustamos a 60min según tu link
-    description: "Ideal para abordar temas puntuales y comenzar tu proceso.",
+    duration: "60 minutos",
+    description: "Conéctate desde la comodidad de tu casa. Ideal para optimizar tiempos.",
     features: [
-      "Encuentro online por Google Meet",
-      "Recursos de apoyo post-sesión",
-      "Disponibilidad horaria flexible",
+      "Encuentro por Google Meet",
+      "Sin tiempos de traslado",
+      "Horarios flexibles",
       "Espacio 100% confidencial"
     ],
-    buttonText: "Agendar Sesión",
-    // 👇 AQUÍ PEGAMOS TU LINK:
-    buttonLink: "https://calendly.com/gastonn520/60min", 
+    buttonText: "Reservar Online",
+    buttonLink: "https://calendly.com/gastonn520/60min",
     isPopular: false,
+    icon: <Video className="w-8 h-8 text-counseling-500" />,
   },
-  // ... el otro plan puede quedar igual o con el mismo link por ahora
+  {
+    title: "Sesión Presencial",
+    price: "$25.000",
+    duration: "60 minutos",
+    description: "Encuentro cara a cara en consultorio ubicado en San Martín, Mendoza.",
+    features: [
+      "Atención en consultorio físico",
+      "Ambiente preparado y seguro",
+      "Contacto directo",
+      "Pago en efectivo o transferencia"
+    ],
+    buttonText: "Reservar Presencial",
+    buttonLink: "https://calendly.com/gastonn520/60min",
+    isPopular: false,
+    icon: <MapPin className="w-8 h-8 text-counseling-500" />,
+  }
 ];
