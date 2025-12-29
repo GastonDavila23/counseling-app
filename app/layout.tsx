@@ -6,10 +6,11 @@ import SocialSidebar from "@/components/ui/SocialSidebar";
 import { ThemeProvider } from "@/components/ui/ThemeProvider";
 import { Lora, Nunito } from 'next/font/google';
 import FloatingLogo from "@/components/ui/FloatingLogo";
+import { Analytics } from "@vercel/analytics/next"
 
 export const lora = Lora({ 
   subsets: ['latin'],
-  variable: '--font-lora', // Para usar con Tailwind
+  variable: '--font-lora',
   display: 'swap',
 });
 
@@ -32,6 +33,7 @@ const geistMono = Nunito({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://counselor-gisela-pontoni.vercel.app'),
   title: "Gisela Pontoni | Counseling y Bienestar Emocional",
   description: "Espacio terapéutico para el desarrollo personal, gestión de ansiedad y vínculos sanos. Sesiones online y presenciales en Mendoza.",
   keywords: ["Counseling", "Terapia", "Mendoza", "Ansiedad", "Bienestar", "Gisela Pontoni"],
@@ -59,6 +61,7 @@ export default function RootLayout({
           <Navbar />
           <SocialSidebar />
           {children}
+          <Analytics />
           <FloatingLogo />
           <Footer />
         </ThemeProvider>
