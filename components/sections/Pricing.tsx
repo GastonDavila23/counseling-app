@@ -23,31 +23,39 @@ export default function Pricing() {
   };
 
   return (
-    <section className="py-20 bg-counseling-50 min-h-screen flex items-center" id="agendar">
-      
-      <BookingModal 
-        isOpen={isModalOpen} 
-        onClose={() => setIsModalOpen(false)} 
-        url={selectedUrl} 
+    <section
+      className="py-20 bg-counseling-light dark:bg-black min-h-screen flex items-center transition-colors duration-500"
+      id="agendar"
+    >
+      <BookingModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        url={selectedUrl}
       />
 
       <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-counseling-900 sm:text-4xl font-serif">
+          {/* --- BADGE / ETIQUETA --- */}
+          <span className="hidden md:inline-block py-1 px-3 rounded-full bg-white dark:bg-gray-900 border border-counseling dark:border-gray-700 text-counseling-dark dark:text-counseling text-sm font-medium mb-6 shadow-sm animate-in fade-in slide-in-from-bottom-4 duration-700">
+            Reserva tu espacio
+          </span>
+          {/* Título: Violeta oscuro vs Blanco */}
+          <h2 className="text-3xl font-bold text-counseling-dark dark:text-white sm:text-4xl font-serif transition-colors">
             Modalidades de atención
           </h2>
-          <p className="mt-3 text-lg text-gray-500">
+          {/* Subtítulo: Gris medio vs Gris claro */}
+          <p className="mt-3 text-lg text-gray dark:text-gray-400 transition-colors">
             Elige el espacio que resuene con tu momento actual
           </p>
         </div>
 
-        {/* CAMBIO AQUÍ: max-w-4xl (para que no se estiren tanto) y grid-cols-2 */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto items-start"> 
+        {/* Grid Container */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto items-start">
           {pricingData.map((plan, index) => (
-            <PricingCard 
-              key={index} 
-              plan={plan} 
-              onSelect={handleBooking} 
+            <PricingCard
+              key={index}
+              plan={plan}
+              onSelect={handleBooking}
             />
           ))}
         </div>

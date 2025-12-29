@@ -1,18 +1,34 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import SocialSidebar from "@/components/ui/SocialSidebar";
+import { ThemeProvider } from "@/components/ui/ThemeProvider";
+import { Lora, Nunito } from 'next/font/google';
+import FloatingLogo from "@/components/ui/FloatingLogo";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+export const lora = Lora({ 
+  subsets: ['latin'],
+  variable: '--font-lora', // Para usar con Tailwind
+  display: 'swap',
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+export const nunito = Nunito({ 
+  subsets: ['latin'],
+  variable: '--font-nunito',
+  display: 'swap',
+});
+
+const geistSans = Nunito({ 
+  subsets: ['latin'],
+  variable: '--font-geist-sans',
+  display: 'swap',
+}); 
+
+const geistMono = Nunito({ 
+  subsets: ['latin'],
+  variable: '--font-geist-mono',
+  display: 'swap',
 });
 
 export const metadata: Metadata = {
@@ -35,14 +51,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es">
+    <html lang="es" suppressHydrationWarning>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Navbar />   
-        <SocialSidebar />
-        {children}
-        <Footer />
+        <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false}>
+          <Navbar />
+          <SocialSidebar />
+          {children}
+          <FloatingLogo />
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );

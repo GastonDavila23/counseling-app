@@ -16,25 +16,22 @@ export default function SocialSidebar() {
             name: "WhatsApp",
             icon: <MessageCircle className="w-6 h-6" />,
             url: `https://wa.me/${phoneNumber}?text=${encodeURIComponent(whatsappMessage)}`,
-            color: "hover:bg-[#25D366]",
-            bg: "bg-green-100 text-green-600",
-            borderColor: "border-green-200"
+            hoverColor: "hover:bg-[#25D366]",
+            styleClasses: "bg-green-50 text-green-600 border-green-200 dark:bg-green-900/20 dark:text-green-400 dark:border-green-800"
         },
         {
             name: "Instagram",
             icon: <Instagram className="w-6 h-6" />,
             url: `https://instagram.com/${instagramUser}`,
-            color: "hover:bg-[#E1306C]",
-            bg: "bg-pink-100 text-pink-600",
-            borderColor: "border-pink-200"
+            hoverColor: "hover:bg-[#E1306C]",
+            styleClasses: "bg-pink-50 text-pink-600 border-pink-200 dark:bg-pink-900/20 dark:text-pink-400 dark:border-pink-800"
         },
         {
             name: "Email",
             icon: <Mail className="w-6 h-6" />,
             url: `https://mail.google.com/mail/?view=cm&fs=1&to=${emailAddress}&su=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`,
-            color: "hover:bg-blue-500",
-            bg: "bg-blue-100 text-blue-600",
-            borderColor: "border-blue-200"
+            hoverColor: "hover:bg-blue-500",
+            styleClasses: "bg-blue-50 text-blue-600 border-blue-200 dark:bg-blue-900/20 dark:text-blue-400 dark:border-blue-800"
         }
     ];
 
@@ -47,13 +44,15 @@ export default function SocialSidebar() {
                     target="_blank"
                     rel="noopener noreferrer"
                     className={`
-            group flex items-center
-            w-12 h-12 overflow-hidden
-            bg-white border ${social.borderColor} shadow-md
-            transition-all duration-300 ease-in-out
-            hover:w-auto hover:max-w-[200px] rounded-r-full
-            ${social.bg} hover:text-white ${social.color}
-          `}
+                        group flex items-center
+                        w-12 h-12 overflow-hidden
+                        border shadow-md dark:shadow-none
+                        transition-all duration-300 ease-in-out
+                        hover:w-auto hover:max-w-[200px] rounded-r-full hover:text-white
+                        
+                        /* Aquí inyectamos las clases dinámicas de color */
+                        ${social.styleClasses} ${social.hoverColor}
+                    `}
                 >
                     <div className="flex-shrink-0 w-12 h-12 flex items-center justify-center">
                         {social.icon}
