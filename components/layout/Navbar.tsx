@@ -19,8 +19,8 @@ export default function Navbar() {
 
   const navLinks = [
     { name: "Inicio", href: "/" },
-    { name: "Sobre Mí", href: "#sobre-mi" },
     { name: "Mi Enfoque", href: "#mi-enfoque" },
+    { name: "Sobre Mí", href: "#sobre-mi" },
     { name: "Acompañamiento", href: "#servicios" },
   ];
 

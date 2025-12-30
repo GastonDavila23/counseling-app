@@ -20,7 +20,7 @@ export default function Process() {
 
   return (
     <section
-      className="min-h-screen flex flex-col justify-center py-12 md:py-20 bg-white md:bg-counseling-light dark:bg-black relative overflow-hidden scroll-mt-20 transition-colors duration-500"
+      className="min-h-screen flex flex-col justify-center md:py-20 bg-white md:bg-counseling-light dark:bg-black relative overflow-hidden scroll-mt-20 transition-colors duration-500"
       id="mi-enfoque"
     >
       {/* Fondos decorativos */}
@@ -30,11 +30,11 @@ export default function Process() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
         <div className="text-center mb-8 md:mb-16">
           {/* --- BADGE / ETIQUETA --- */}
-          <span className="hidden md:inline-block py-1 px-3 rounded-full bg-white dark:bg-gray-900 border border-counseling dark:border-gray-700 text-counseling-dark dark:text-counseling text-sm font-medium mb-6 shadow-sm animate-in fade-in slide-in-from-bottom-4 duration-700">
+          <span className="inline-block py-1 px-3 rounded-full bg-white dark:bg-gray-900 border border-counseling dark:border-gray-700 text-counseling-dark dark:text-counseling text-sm font-medium mb-6 shadow-sm animate-in fade-in slide-in-from-bottom-4 duration-700">
             Proceso de Acompañamiento
           </span>
           {/* TITULO */}
-          <h2 className="text-3xl md:text-4xl font-bold text-counseling-dark dark:text-white font-serif transition-colors">
+          <h2 className="text-3xl md:text-4xl font-bold text-counseling-dark dark:text-white font-serif transition-colors pb-4">
             ¿Cómo trabajaremos juntos?
           </h2>
         </div>
@@ -68,7 +68,13 @@ export default function Process() {
           {/* ==============================================
               TARJETA CENTRAL
              ============================================== */}
-          <div className="flex-row h-[320px] bg-white dark:bg-gray-900 rounded-3xl border border-gray-100 dark:border-gray-800 md:border-none shadow-sm md:shadow-xl overflow-hidden flex flex-col md:flex-row h-[420px] md:h-auto md:min-h-[450px] animate-in fade-in duration-500 transition-colors duration-300">
+          <div className="flex-row h-[480px] md:h-auto md:min-h-[450px] rounded-3xl border-2 md:border-none shadow-sm md:shadow-xl overflow-hidden flex flex-col md:flex-row animate-in fade-in duration-500 transition-colors duration-300
+
+          /* Light Mode */
+          bg-white border-gray-100
+
+          /* Dark Mode */
+          dark:bg-gray-900 dark:border-gray-800">
 
             {/* Icono Grande Izquierda */}
             <div className="hidden md:flex bg-counseling-dark w-1/3 flex-col items-center justify-center p-8 text-white relative overflow-hidden">
@@ -82,16 +88,16 @@ export default function Process() {
             </div>
 
             {/* Contenido Derecha */}
-            <div className="w-full md:w-2/3 p-6 md:p-12 flex flex-col justify-center relative h-full">
+            <div className="w-full md:w-2/3 p-6 gap-4 md:p-12 flex flex-col relative h-full">
 
               {/* Header Mobile */}
               <div className="md:hidden flex items-center gap-3 mb-4">
-                <span className="text-xs font-bold text-counseling dark:text-counseling-light tracking-widest uppercase">
+                <span className="text-2xl font-bold text-gray-dark border-2 border-gray-dark dark:border-counseling-dark rounded-3xl py-1 px-4 dark:text-counseling-dark tracking-widest uppercase">
                   Paso 0{currentProcess.id}
                 </span>
               </div>
 
-              <h4 className="text-xl md:text-3xl font-bold text-counseling-dark dark:text-white mb-3 md:mb-6 font-serif transition-colors">
+              <h4 className="text-5xl mb-8 md:text-3xl font-bold text-counseling-dark dark:text-white mb-3 md:mb-6 font-serif transition-colors">
                 {currentProcess.title}
               </h4>
 

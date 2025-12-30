@@ -13,7 +13,7 @@ export const pricingData = [
       "Espacio de confidencialidad y respeto absoluto."
     ],
     buttonText: "Reservar Online",
-    buttonLink: "https://calendly.com/gastonn520/60min",
+    buttonLink: "https://calendly.com/gisela-pontoni-96/sesion-individual",
     isPopular: false,
     icon: <Video className="w-8 h-8 text-counseling-500" />,
   },
@@ -29,7 +29,7 @@ export const pricingData = [
       "Comunicación fluida y sin interrupciones técnicas."
     ],
     buttonText: "Reservar Presencial",
-    buttonLink: "https://calendly.com/gastonn520/60min",
+    buttonLink: "https://calendly.com/gisela-pontoni-96/sesion-individual",
     isPopular: false,
     icon: <MapPin className="w-8 h-8 text-counseling-500" />,
   }
