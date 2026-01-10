@@ -5,9 +5,9 @@ export const servicesData = [
     details: "Te acompaño a transformar tu forma de expresarte en una más asertiva. Aprendemos a identificar sentimientos y necesidades —propias y ajenas— para construir vínculos basados en el respeto y la empatía.",
   },
   {
-    title: "Ansiedad y Depresión",
+    title: "Ansiedad Normal y Angustia",
     description: "Estados de alerta constante o falta de vitalidad.",
-    details: "Brindo un entorno seguro para comprender estos estados y reencontrar la calma y el deseo. Juntos exploraremos las causas subyacentes de tu ansiedad o depresión, y desarrollaremos estrategias personalizadas para gestionar tus emociones y recuperar tu bienestar.",
+    details: "Brindo un entorno seguro para comprender estos estados y reencontrar la calma y el deseo. Juntos exploraremos las causas subyacentes de tu ansiedad normal o angustia, y desarrollaremos estrategias personalizadas para gestionar tus emociones y recuperar tu bienestar.",
   },
   {
     title: "Desarrollo Personal",
