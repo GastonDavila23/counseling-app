@@ -43,7 +43,7 @@ export default function Footer() {
               <p className="dark:text-gray-400 font-medium">Counselor Profesional</p>
             </div>
             <p className="hidden md:block dark:text-gray-400 text-sm leading-relaxed max-w-xs mx-auto md:mx-0">
-              Un espacio seguro para reencontrarte y transformar tu bienestar emocional.
+              Un espacio seguro para tu bienestar emocional.
             </p>
           </div>
 

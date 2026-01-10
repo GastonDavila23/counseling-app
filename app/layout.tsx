@@ -8,27 +8,15 @@ import { Lora, Nunito } from 'next/font/google';
 import FloatingLogo from "@/components/ui/FloatingLogo";
 import { Analytics } from "@vercel/analytics/next"
 
-export const lora = Lora({ 
+const lora = Lora({
   subsets: ['latin'],
   variable: '--font-lora',
   display: 'swap',
 });
 
-export const nunito = Nunito({ 
+const nunito = Nunito({
   subsets: ['latin'],
   variable: '--font-nunito',
-  display: 'swap',
-});
-
-const geistSans = Nunito({ 
-  subsets: ['latin'],
-  variable: '--font-geist-sans',
-  display: 'swap',
-}); 
-
-const geistMono = Nunito({ 
-  subsets: ['latin'],
-  variable: '--font-geist-mono',
   display: 'swap',
 });
 
@@ -55,7 +43,7 @@ export default function RootLayout({
   return (
     <html lang="es" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${nunito.variable} ${lora.variable} font-sans antialiased`}
       >
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false}>
           <Navbar />

@@ -8,9 +8,13 @@ import ServiceModal from "../ui/ServiceModal";
 export default function Services() {
   const [selectedService, setSelectedService] = useState<(typeof servicesData)[0] | null>(null);
 
-  // --- Lógica Desktop (Grid de 3) ---
+  // =========================================
+  // LOGICA DESKTOP (Grid de 3)
+  // =========================================
   const [desktopIndex, setDesktopIndex] = useState(0);
   const itemsPerPageDesktop = 3;
+  
+  // Condicionales de navegación Desktop
   const canGoNextDesktop = desktopIndex + itemsPerPageDesktop < servicesData.length;
   const canGoPrevDesktop = desktopIndex > 0;
 
@@ -19,14 +23,19 @@ export default function Services() {
 
   const visibleServicesDesktop = servicesData.slice(desktopIndex, desktopIndex + itemsPerPageDesktop);
 
-  // --- Lógica Mobile (Grid de 1) ---
+  // =========================================
+  // LOGICA MOBILE (Grid de 1)
+  // =========================================
   const [mobileIndex, setMobileIndex] = useState(0);
+  const canGoPrevMobile = mobileIndex > 0;
+  const canGoNextMobile = mobileIndex < servicesData.length - 1;
 
-  const nextSlideMobile = () => {
-    setMobileIndex(prev => (prev === servicesData.length - 1 ? 0 : prev + 1));
+  const handleNextMobile = () => {
+    if (canGoNextMobile) setMobileIndex((prev) => prev + 1);
   };
-  const prevSlideMobile = () => {
-    setMobileIndex(prev => (prev === 0 ? servicesData.length - 1 : prev - 1));
+
+  const handlePrevMobile = () => {
+    if (canGoPrevMobile) setMobileIndex((prev) => prev - 1);
   };
 
   return (
@@ -81,14 +90,9 @@ export default function Services() {
             {visibleServicesDesktop.map((service) => (
               <div
                 key={service.title}
-                // Card Container: Blanco (Light) / Gris Oscuro (Dark)
+                // Card Container
                 className="group relative rounded-2xl p-8 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col h-full cursor-pointer
-                  
-                  
-                  /* Light Mode */
                   bg-white border border-gray-100
-
-                  /* Dark Mode */
                   dark:bg-gray-900 dark:border-gray-800 dark:hover:border-counseling-dark"
                 onClick={() => setSelectedService(service)}
               >
@@ -105,11 +109,7 @@ export default function Services() {
                 {/* PIE DE TARJETA */}
                 <div className="mt-auto pt-4 border-t border-gray-50 dark:border-gray-800">
                   <span className="group-hover:underline decoration-2 underline-offset-4 transition-colors
-                  
-                  /* Light Mode */
                   text-sm font-bold text-accent
-                  
-                  /* Dark Mode */
                   dark:text-accent-400"
                   >
                     Ver detalles →
@@ -127,10 +127,7 @@ export default function Services() {
               absolute -right-16 lg:-right-24 top-1/2 -translate-y-1/2 z-20 
               p-3 rounded-full shadow-lg transition-all duration-300
 
-              /* Light Mode */
               bg-white text-counseling-dark border border-gray-100 hover:bg-counseling-light hover:text-counseling
-              
-              /* Dark Mode */
               dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 dark:hover:bg-gray-800 dark:hover:text-white
 
               ${!canGoNextDesktop ? "opacity-0 invisible" : "opacity-100 visible"}
@@ -184,9 +181,18 @@ export default function Services() {
 
           {/* Controles Mobile Debajo */}
           <div className="flex justify-between items-center mt-4 px-2">
+            
+            {/* BOTÓN ANTERIOR MOBILE */}
             <button
-              onClick={prevSlideMobile}
-              className="p-3 rounded-full shadow-md active:scale-95 transition-transform bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800 text-counseling-dark dark:text-gray-300"
+              onClick={handlePrevMobile}
+              disabled={!canGoPrevMobile}
+              className={`
+                p-3 rounded-full shadow-md border border-gray-100 dark:border-gray-800 
+                bg-white dark:bg-gray-900 text-counseling-dark dark:text-gray-300
+                transition-all active:scale-95
+                /* CLASES PARA DESHABILITAR VISUALMENTE */
+                ${!canGoPrevMobile ? "opacity-50 grayscale cursor-not-allowed" : "hover:scale-105"}
+              `}
               aria-label="Anterior"
             >
               <ChevronLeft className="w-5 h-5" />
@@ -196,9 +202,17 @@ export default function Services() {
               {mobileIndex + 1} / {servicesData.length}
             </span>
 
+            {/* BOTÓN SIGUIENTE MOBILE */}
             <button
-              onClick={nextSlideMobile}
-              className="p-3 rounded-full shadow-md active:scale-95 transition-transform bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800 text-counseling-dark dark:text-gray-300"
+              onClick={handleNextMobile}
+              disabled={!canGoNextMobile}
+              className={`
+                p-3 rounded-full shadow-md border border-gray-100 dark:border-gray-800 
+                bg-white dark:bg-gray-900 text-counseling-dark dark:text-gray-300
+                transition-all active:scale-95
+                /* CLASES PARA DESHABILITAR VISUALMENTE */
+                ${!canGoNextMobile ? "opacity-50 grayscale cursor-not-allowed" : "hover:scale-105"}
+              `}
               aria-label="Siguiente"
             >
               <ChevronRight className="w-5 h-5" />

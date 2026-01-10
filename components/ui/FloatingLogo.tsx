@@ -18,8 +18,8 @@ export default function FloatingLogo() {
         onClick={() => setIsOpen(true)}
         className={`
           hidden
-          fixed top-1/2 -translate-y-1/2 right-4 z-40
-          w-44 h-44 rounded-full 
+          fixed bottom-0 -translate-y-1/2 right-2 z-40
+          w-24 h-24 rounded-full 
           bg-white/90 dark:bg-gray-800/90 backdrop-blur-md
           shadow-[0_4px_20px_rgba(0,0,0,0.1)] dark:shadow-[0_4px_20px_rgba(0,0,0,0.4)]
           border border-white/50 dark:border-gray-700/50

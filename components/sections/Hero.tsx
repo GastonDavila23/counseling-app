@@ -2,7 +2,10 @@ import { ArrowRight } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center md:bg-gradient-to-b md:from-counseling-light via-white to-white dark:from-black dark:via-black dark:to-[#0f1219] overflow-hidden transition-colors duration-500">
+    <section
+      className="relative min-h-screen flex items-center justify-center md:bg-gradient-to-b md:from-counseling-light via-white to-white dark:from-black dark:via-black dark:to-[#0f1219] overflow-hidden transition-colors duration-500"
+      id="inicio"
+    >
 
       {/* --- FONDO DECORATIVO (BLOBS) --- */}
       <div className="hidden md:absolute top-0 left-0 w-full h-full overflow-hidden z-0 pointer-events-none">
@@ -20,7 +23,7 @@ export default function Hero() {
         </span>
 
         {/* --- TÍTULO PRINCIPAL --- */}
-        <h1 className="text-4xl md:text-6xl font-bold text-counseling dark:text-counseling-dark tracking-tight font-nunito mb-6 animate-in fade-in slide-in-from-bottom-6 duration-700 delay-100 transition-colors">
+        <h1 className="text-4xl md:text-6xl font-bold text-counseling dark:text-counseling-dark tracking-tight font-sans mb-6 animate-in fade-in slide-in-from-bottom-6 duration-700 delay-100 transition-colors">
           Un espacio seguro para <br className="hidden md:block" />
           <span className="text-accent dark:text-accent-light relative inline-block">
             reencontrarte
@@ -38,7 +41,7 @@ export default function Hero() {
 
         {/* --- BOTONES CTA --- */}
         <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center animate-in fade-in slide-in-from-bottom-6 duration-700 delay-300">
-          
+
           {/* Botón Principal (Verde) */}
           <a
             href="#mi-enfoque"

@@ -33,7 +33,7 @@ const config: Config = {
         },
       },
       fontFamily: {
-        serif: ['var(--font-lora)'],
+        serif: ['var(--font-nunito)'],
         sans: ['var(--font-nunito)'],
       },
     },
