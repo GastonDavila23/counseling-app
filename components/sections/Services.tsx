@@ -53,12 +53,12 @@ export default function Services() {
 
           {/* TITULO */}
           <h2 className="text-3xl md:text-4xl font-bold text-counseling-dark dark:text-white font-serif mb-4 transition-colors">
-            Espacios diseñados para tu bienestar
+            ¿En qué momentos puedo acompañarte?
           </h2>
 
           {/* DESCRIPCION */}
           <p className="text-lg text-gray dark:text-gray-400 transition-colors">
-            Diferentes abordajes para acompañarte en el momento que estés transitando.
+            Acompañando tus procesos, cultivando tu calma
           </p>
         </div>
 
