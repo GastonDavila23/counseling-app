@@ -10,6 +10,11 @@ export const servicesData = [
     details: "Brindo un entorno seguro para comprender estos estados y reencontrar la calma y el deseo. Juntos exploraremos las causas subyacentes de tu ansiedad normal o angustia, y desarrollaremos estrategias personalizadas para gestionar tus emociones y recuperar tu bienestar.",
   },
   {
+    title: "Relaciones Fallidas",
+    description: "Vínculos que generan dolor o repetición.",
+    details: "Reflexionamos sobre tus patrones vinculares y fortalecemos tu autoestima para relacionarte mejor. Juntos exploraremos las causas subyacentes de tus problemas de relaciones y desarrollaremos estrategias personalizadas para mejorar tu calidad de vida emocional y plenitud.",
+  },
+  {
     title: "Desarrollo Personal",
     description: "El impulso de crecer y conocerte.",
     details: "Facilitamos el despliegue de tus potencialidades para que alcances tu mejor versión. Juntos vamos a desenredar lo que sentís para encontrar claridad y construir herramientas que te sirvan en tu día a día.",
@@ -53,10 +58,5 @@ export const servicesData = [
     title: "Problemas del pasado",
     description: "Narrativas que hoy te condicionan negativamente.",
     details: "Revisamos tu historia para sanar heridas y que el ayer deje de ser un obstáculo en tu presente. Trabajaremos juntos para identificar patrones del pasado que aún te afectan, y desarrollaremos nuevas perspectivas y estrategias para liberarte de esas limitaciones y vivir plenamente en el presente.",
-  },
-  {
-    title: "Relaciones Fallidas",
-    description: "Vínculos que generan dolor o repetición.",
-    details: "Reflexionamos sobre tus patrones vinculares y fortalecemos tu autoestima para relacionarte mejor. Juntos exploraremos las causas subyacentes de tus problemas de relaciones y desarrollaremos estrategias personalizadas para mejorar tu calidad de vida emocional y plenitud.",
   }
 ];
