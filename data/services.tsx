@@ -6,7 +6,7 @@ export const servicesData = [
   },
   {
     title: "Ansiedad Normal y Angustia",
-    description: "Estados de alerta constante o falta de vitalidad.",
+    description: "Estados de alerta o falta de vitalidad.",
     details: "Brindo un entorno seguro para comprender estos estados y reencontrar la calma y el deseo. Juntos exploraremos las causas subyacentes de tu ansiedad normal o angustia, y desarrollaremos estrategias personalizadas para gestionar tus emociones y recuperar tu bienestar.",
   },
   {
