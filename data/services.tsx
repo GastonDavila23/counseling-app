@@ -15,6 +15,11 @@ export const servicesData = [
     details: "Juntos exploraremos los posibles problemas de relaciones y encontraremos soluciones para mejorar la calidad de tus vínculos.",
   },
   {
+    title: "Relaciones Fallidas",
+    description: "Vínculos que generan dolor o repetición.",
+    details: "Reflexionamos sobre tus patrones vinculares y fortalecemos tu autoestima para relacionarte mejor. Juntos exploraremos las causas subyacentes de tus problemas de relaciones y desarrollaremos estrategias personalizadas para mejorar tu calidad de vida emocional y plenitud.",
+  },
+  {
     title: "Desarrollo Personal",
     description: "El impulso de crecer y conocerte.",
     details: "Facilito el despliegue de tus potencialidades, desenredado lo que sentís para que encuentres claridad y alcances tu mejor versión en coherencia con tu interior.",
