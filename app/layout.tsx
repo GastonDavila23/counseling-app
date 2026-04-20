@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import SocialSidebar from "@/components/ui/SocialSidebar";
@@ -21,7 +20,7 @@ const nunito = Nunito({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://counselor-gisela-pontoni.vercel.app'),
+  metadataBase: new URL('https://www.giselapontoni.com'),
   title: "Gisela Pontoni | Counseling y Bienestar Emocional",
   description: "Espacio terapéutico para el desarrollo personal, gestión de ansiedad y vínculos sanos. Sesiones online y presenciales en Mendoza.",
   keywords: ["Counseling", "Terapia", "Mendoza", "Ansiedad", "Bienestar", "Gisela Pontoni"],

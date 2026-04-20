@@ -7,7 +7,7 @@ export default function Footer() {
   // --- CONFIGURACIÓN DE CONTACTO ---
   const phoneNumber = "5492634632372";
   const emailAddress = "gisela.pontoni.96@gmail.com";
-  const instagramUser = "gisela_pontoni";
+  const instagramUser = "gisela.counselor";
 
   const whatsappMessage = "Hola Gisela, vi tu web y me gustaría solicitar información sobre las sesiones de Counseling.";
   const emailSubject = "Consulta sobre Sesiones de Counseling";
