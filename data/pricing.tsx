@@ -5,7 +5,7 @@ export const pricingData = [
     title: "Sesión Online",
     price: "$15.000",
     duration: "60 minutos",
-    description: "Un espacio de acompañamiento para que puedas conectar desde la comodidad de tu casa o el lugar donde te encuentres.",
+    description: "Espacio de acompañamiento para que puedas conectar desde la comodidad de tu casa o el lugar donde te encuentres.",
     features: [
       "Encuentro mediante videollamada (Google Meet).",
       "Facilidad de acceso sin necesidad de traslados.",
